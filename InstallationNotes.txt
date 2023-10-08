@@ -1,0 +1,13 @@
+# installation notes for python
+# find the installed version in the Mac Os
+python3.10
+# list all the installed packages in the installed python version
+pip3.10 list
+# Clean the installed packages
+pip3.10 freeze | xargs pip uninstall -y
+# Install Apache Air flow with compatible version
+pip3.10 install "apache-airflow==2.7.1" apache-airflow-providers-google==10.1.0
+# List the installed packages by Airflow and find the availability of Macros
+# Installed must see the 
+# install dbt core on top of apache airflow
+pip3.10 install airflow-dbt-python

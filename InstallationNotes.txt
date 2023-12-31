@@ -13,3 +13,6 @@ pip3.10 install "apache-airflow==2.7.1" apache-airflow-providers-google==10.1.0
 pip3.10 install airflow-dbt-python
 # export installed pacakages to requirements file for maintainability
 pip3.10 freeze > /Users/sdg/Documents/git/Airflow/requirements.txt
+
+# Generic installation
+pip3.10 install -r requirements.txt

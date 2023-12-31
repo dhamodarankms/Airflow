@@ -228,3 +228,4 @@ WTForms==3.0.1
 yarl==1.9.2
 zipp==3.17.0
 fivetran==0.7.0
+kinesis-python==0.2.1

@@ -1,6 +1,7 @@
 # installation notes for python
 # find the installed version in the Mac Os
 python3.10
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10
 # list all the installed packages in the installed python version
 pip3.10 list
 # Clean the installed packages
@@ -16,3 +17,4 @@ pip3.10 freeze > /Users/sdg/Documents/git/Airflow/requirements.txt
 
 # Generic installation
 pip3.10 install -r requirements.txt
+pip3.10 install -r /Users/sdg/Documents/git/Airflow/Airflow/requirements.txt

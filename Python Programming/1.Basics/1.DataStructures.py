@@ -1,5 +1,6 @@
 from operator import itemgetter, attrgetter
 from functools import cmp_to_key
+from collections import deque
 #Variables
 tax_slap = 38.8;
 price = 140000;
@@ -56,3 +57,23 @@ student_record = sorted(student_record, key=attrgetter('name','age'), reverse=Fa
 print(student_record);
 student_record = student.__multisort__(student_record,(('age',False),('name',True)));       #sort based on multisort
 print(student_record);
+
+#stacks
+stack = [1,2,3,4,5]; #last in first out
+stack.append(6);
+print(stack);
+stack.pop();
+print(stack);
+
+#queue 
+queue = deque(['A','B','C']); #first in first out
+queue.pop();
+print(queue);
+queue.popleft();
+print(queue);
+
+#list comprehension
+squares = list(map(lambda x:x**2, range(11)));
+print(squares);
+
+#tuples and Sequences

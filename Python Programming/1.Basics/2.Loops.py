@@ -25,3 +25,19 @@ for i in range(numbers.__len__()):
     else:
         numbers[i] = numbers[i]*3;
 print(numbers);
+
+#for loop in a list comprehension
+output = [(i,j) for i in (1,2,3) for j in (1,4,3) if i == j];
+print(output);
+vec = [[1,2,3],[4,5,6],[7,8,9]];
+output = [num for elem in vec for num in elem];
+print(output);
+
+#transpose rows to columns
+matrix = [  [1,2,3],    
+            [4,5,6],
+            [7,8,9,10] ];
+
+output = [[row[i] for row in matrix] for i in range(3)];
+print(output);
+

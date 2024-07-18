@@ -23,6 +23,11 @@ def main():
                         student('Sonia', 46, 'L4'),
                         student('Paul', 50, 'L3')  ]
     
+    numbers = [1,10,20,100];
+    squares = {10:1,1:10,2:20,3:100,4:110,50:120};
+
+    student_file = open("/Users/sdg/student_file.txt", "a");
+
     for index, stu in enumerate(student_record):
         print(["New Age : " + str(eval('a+b',{'a':stu.age,'b':index})), student.__repr__(stu)])
         exec('print(a+i)',{'a':stu.age, 'i':index});
@@ -36,9 +41,25 @@ def main():
     print(isinstance(student_record, int));
 
     for stu in iter(student_record):
-        print(stu);
+        student_file.write(student.__repr__(stu));
+
+    student_file.close();
 
     print(len(student_record));
     print(locals());
+
+    map_adults = map(lambda s:student.__validate_age__(s), student_record);
+    print(list(map_adults));
+    print(min(numbers));
+    print(max(numbers));
+
+    min_square = min(squares, key = lambda sq: squares[sq]);
+    max_square = max(squares, key = lambda sq: squares[sq]);
+
+    print(min_square);
+    print(max_square);
+
+    iter_squares = iter(student_record);
+    print(next(iter_squares));
 
 main();        
